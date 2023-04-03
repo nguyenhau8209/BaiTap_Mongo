@@ -1,0 +1,23 @@
+<h3><a href="/product/" class="btn btn-primary">Add user</a> {{viewTitle}}</h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>So luong</th>
+        <th>Action</th>
+
+    </tr>
+
+    {{#each products}}
+    <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.price}}</td>
+        <td>{{this.soluong}}</td>
+        <td><a href="/product/edit/{{this._id}}" class="btn btn-primary btn-sm">Edit</a> |
+            <a href="/product/delete/{{this._id}}" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+    </tr>
+    {{/each}}
+</table>
+
